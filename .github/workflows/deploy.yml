@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
   deploy:
-    runs-on: benderhost1
+    runs-on: bndhost1
     steps:
       - uses: actions/checkout@v2
       - name: Pull containers
