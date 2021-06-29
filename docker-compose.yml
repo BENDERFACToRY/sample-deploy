@@ -1,0 +1,14 @@
+networks:
+  default:
+    external:
+      name: proxy
+
+services:
+  whoami:
+    image: jwilder/whoami
+    expose:
+      - "8000"
+    environment:
+      - VIRTUAL_HOST=whoami.benderfactory.com
+      - LETSENCRYPT_HOST=whoami.benderfactory.com
+      - VIRTUAL_PORT=8000
